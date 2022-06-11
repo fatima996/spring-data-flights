@@ -52,10 +52,10 @@ public class PagingAndSortingTest {
         assertThat(iterator.next().getDestination()).isEqualTo("New York");
     }
 
-    private Flight createFlight(String origin) {
+    private Flight createFlight(String destination) {
         final Flight flight = new Flight();
-        flight.setOrigin(origin);
-        flight.setDestination("Madrid");
+        flight.setOrigin("Madrid");
+        flight.setDestination(destination);
         flight.setScheduleAt(LocalDateTime.parse("2022-12-13T12:12:00"));
         return flight;
     }
